@@ -4,9 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
-// Get base path from Vite config, remove trailing slash for React Router
+// Get base path from Vite config
+// Vite's BASE_URL includes trailing slash (e.g., '/JTC-AI-Hackathon-enablement/')
+// React Router basename should NOT have trailing slash (except for root '/')
 const baseUrl = import.meta.env.BASE_URL || '/'
-const basename = baseUrl.endsWith('/') && baseUrl !== '/' ? baseUrl.slice(0, -1) : baseUrl
+const basename = baseUrl === '/' ? '/' : baseUrl.replace(/\/$/, '')
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

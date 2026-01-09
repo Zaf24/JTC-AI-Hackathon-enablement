@@ -57,7 +57,7 @@ export default function Home() {
             >
               <figure className="relative">
                 <img 
-                  src="/images/azure-ai-icon.png" 
+                  src={`${import.meta.env.BASE_URL}images/azure-ai-icon.png`}
                   alt="Azure AI – Your intelligent procurement mission control" 
                   className="w-full max-w-lg transform hover:scale-105 transition-transform duration-300"
                 />
