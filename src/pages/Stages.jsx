@@ -101,9 +101,21 @@ export default function Stages() {
       // Navigate to Stage 1 overview or specific step
       if (stepId === '1.1') {
         navigate('/stage/1/step/1.1')
+      } else if (stepId === '1.2') {
+        navigate('/stage/1/step/1.2')
+      } else if (stepId === '1.3') {
+        navigate('/stage/1/step/1.3')
       } else {
         // For other Stage 1 steps, navigate to overview page
         navigate('/stage/1')
+      }
+    } else if (stageId === 2) {
+      // Navigate to Stage 2 overview or specific step
+      if (stepId === '2.1') {
+        navigate('/stage/2/step/2.1')
+      } else {
+        // For other Stage 2 steps, navigate to overview page
+        navigate('/stage/2')
       }
     } else {
       // TODO: Add navigation for other stages when pages are created

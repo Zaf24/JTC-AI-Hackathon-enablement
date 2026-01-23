@@ -377,12 +377,12 @@ export default function Stage1Step1() {
               >
                 Back to Stage 1 Overview
               </Link>
-              <button
-                disabled
-                className="px-6 py-3 bg-blue-600/50 backdrop-blur-sm text-white rounded-lg font-bold text-lg cursor-not-allowed border-2 border-blue-400/30 text-center opacity-60"
+              <Link
+                to="/stage/1/step/1.2"
+                className="px-6 py-3 bg-white text-mission-primary rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
-                Step 1.2 Coming Soon →
-              </button>
+                Continue to Step 1.2 →
+              </Link>
             </div>
           </motion.div>
         </motion.div>

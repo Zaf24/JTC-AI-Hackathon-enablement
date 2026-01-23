@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-export default function Stage1Overview() {
+export default function Stage2Overview() {
   return (
     <div className="min-h-screen bg-gray-50">
       <section className="section-container pt-16">
@@ -19,13 +19,13 @@ export default function Stage1Overview() {
               <span className="mr-2">←</span> Back to Stages
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              🔍 Stage 1: Vendor Scout Agent
+              📧 Stage 2: Mission Comms
             </h1>
             <p className="text-xl text-gray-700 mb-2">
-              <span className="font-semibold">Call Sign:</span> Vendor Scout
+              <span className="font-semibold">Call Sign:</span> RFP Automation
             </p>
             <p className="text-lg text-gray-600">
-              Build an AI-powered agent with knowledge base integration to match vendors with precision and deliver ranked recommendations.
+              Create Logic Apps workflows to automate RFP email distribution, track responses, and manage approval workflows.
             </p>
           </div>
 
@@ -33,22 +33,22 @@ export default function Stage1Overview() {
           <div className="bg-blue-50 border-l-4 border-mission-primary p-6 rounded-lg mb-8">
             <h2 className="text-2xl font-bold mb-3">Mission Overview</h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              In Stage 1, you'll build the Vendor Scout Agent - an intelligent system that matches vendors with precision 
-              using AI models and knowledge base integration. This agent will understand procurement requirements, search 
-              through vendor profiles, and deliver ranked recommendations with confidence scores.
+              In Stage 2, you'll build the Mission Comms system - an automated RFP (Request for Proposal) workflow that 
+              streamlines vendor communication. You'll create Logic Apps workflows that automatically send RFP emails to 
+              vendors, track responses, and manage approval processes.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              The Vendor Scout Agent is the foundation of the Procurement Command Center, enabling Sarah to find the 
-              perfect vendor match quickly and confidently.
+              The Mission Comms system integrates seamlessly with the Vendor Scout Agent, enabling automated email distribution 
+              when vendors are selected, ensuring efficient and consistent communication throughout the procurement process.
             </p>
           </div>
 
           {/* Stage Steps */}
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold mb-6">Stage 1 Steps</h2>
+            <h2 className="text-3xl font-bold mb-6">Stage 2 Steps</h2>
             
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Step 1.1 */}
+              {/* Step 2.1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -56,21 +56,21 @@ export default function Stage1Overview() {
                 transition={{ duration: 0.5 }}
                 className="border-2 border-gray-200 rounded-lg p-6 hover:border-mission-primary transition-colors"
               >
-                <div className="text-3xl mb-3">1.1</div>
-                <h3 className="text-xl font-semibold mb-3">Provision Model</h3>
+                <div className="text-3xl mb-3">2.1</div>
+                <h3 className="text-xl font-semibold mb-3">Navigate to Logic Apps and Build Workflows</h3>
                 <p className="text-gray-700 mb-4">
-                  Set up the AI model for vendor matching. You'll create a Microsoft AI Foundry resource and deploy 
-                  the GPT-4o model that will power the Vendor Scout Agent.
+                  Navigate to Logic Apps and build the necessary workflows for RFP automation. Create workflows that 
+                  handle HTTP requests and send automated emails to vendors.
                 </p>
                 <Link
-                  to="/stage/1/step/1.1"
+                  to="/stage/2/step/2.1"
                   className="inline-block px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium"
                 >
-                  Start Step 1.1 →
+                  Start Step 2.1 →
                 </Link>
               </motion.div>
 
-              {/* Step 1.2 */}
+              {/* Step 2.2 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -78,21 +78,21 @@ export default function Stage1Overview() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="border-2 border-gray-200 rounded-lg p-6 hover:border-mission-primary transition-colors"
               >
-                <div className="text-3xl mb-3">1.2</div>
-                <h3 className="text-xl font-semibold mb-3">Upload Instructions and Knowledge Base</h3>
+                <div className="text-3xl mb-3">2.2</div>
+                <h3 className="text-xl font-semibold mb-3">Create OpenAPI Connections</h3>
                 <p className="text-gray-700 mb-4">
-                  Configure the knowledge base with vendor profiles and capabilities. Upload instructions that will 
-                  guide the agent in matching vendors accurately.
+                  Create OpenAPI connections for the Logic Apps workflows. Connect the Vendor Scout Agent to the 
+                  RFP automation workflow.
                 </p>
-                <Link
-                  to="/stage/1/step/1.2"
-                  className="inline-block px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium"
+                <button
+                  disabled
+                  className="inline-block px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed text-sm font-medium"
                 >
-                  Start Step 1.2 →
-                </Link>
+                  Coming Soon
+                </button>
               </motion.div>
 
-              {/* Step 1.3 */}
+              {/* Step 2.3 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -100,18 +100,17 @@ export default function Stage1Overview() {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="border-2 border-gray-200 rounded-lg p-6 hover:border-mission-primary transition-colors"
               >
-                <div className="text-3xl mb-3">1.3</div>
+                <div className="text-3xl mb-3">2.3</div>
                 <h3 className="text-xl font-semibold mb-3">Test</h3>
                 <p className="text-gray-700 mb-4">
-                  Validate the vendor matching agent with sample queries. Test the agent's ability to match vendors 
-                  accurately and deliver ranked recommendations.
+                  Test the RFP automation workflows. Validate that emails are sent correctly and responses are tracked properly.
                 </p>
-                <Link
-                  to="/stage/1/step/1.3"
-                  className="inline-block px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium"
+                <button
+                  disabled
+                  className="inline-block px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed text-sm font-medium"
                 >
-                  Start Step 1.3 →
-                </Link>
+                  Coming Soon
+                </button>
               </motion.div>
             </div>
           </div>
@@ -123,26 +122,26 @@ export default function Stage1Overview() {
               <li className="flex items-start">
                 <span className="text-2xl mr-3">✅</span>
                 <div>
-                  <strong>AI-powered vendor matching system</strong> that understands procurement requirements and 
-                  searches through vendor profiles intelligently
+                  <strong>Automated RFP email workflows</strong> that send professional proposal requests to vendors 
+                  with all necessary details
                 </div>
               </li>
               <li className="flex items-start">
                 <span className="text-2xl mr-3">✅</span>
                 <div>
-                  <strong>Knowledge base integration</strong> that stores and retrieves vendor capabilities and profiles
+                  <strong>Logic Apps integration</strong> that connects the Vendor Scout Agent to email automation
                 </div>
               </li>
               <li className="flex items-start">
                 <span className="text-2xl mr-3">✅</span>
                 <div>
-                  <strong>Ranked recommendations</strong> with confidence scores to help Sarah make informed decisions
+                  <strong>HTTP-triggered workflows</strong> that accept structured data and generate personalized emails
                 </div>
               </li>
               <li className="flex items-start">
                 <span className="text-2xl mr-3">✅</span>
                 <div>
-                  <strong>Intelligent matching algorithm</strong> that scores vendors based on requirements and capabilities
+                  <strong>Email template system</strong> that dynamically populates vendor and requirement information
                 </div>
               </li>
             </ul>
@@ -158,14 +157,14 @@ export default function Stage1Overview() {
           >
             <h2 className="text-3xl font-bold mb-4">🚀 Ready to Start?</h2>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Begin with Step 1.1 to provision your AI model. This is the foundation that will power your Vendor Scout Agent.
+              Begin with Step 2.1 to build your Logic Apps workflow. This will create the foundation for automated RFP email distribution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                to="/stage/1/step/1.1"
+                to="/stage/2/step/2.1"
                 className="px-6 py-3 bg-white text-mission-primary rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
-                Start Step 1.1: Provision Model →
+                Start Step 2.1: Build Workflows →
               </Link>
               <Link
                 to="/stages"
