@@ -57,10 +57,7 @@ export default function Layout({ children }) {
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm">
-            Built for AI Foundry · Project Ignite: Procurement Command Centre ✨
-          </p>
-          <p className="text-xs mt-2 text-gray-400">
-            Mission: Ignite the Best Vendor Match 🚀
+            🚀 Project Ignite · Built by Zafir · Solution Engineer, Microsoft 💼
           </p>
         </div>
       </footer>
