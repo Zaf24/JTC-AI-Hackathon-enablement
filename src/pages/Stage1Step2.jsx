@@ -31,6 +31,7 @@ When the user indicates intent such as:
 "request a quote"
 Here is the tool calling with OpenAPI for JTCDemo1 endpoint:
 You must pause execution and move to information‑collection mode.
+Use the email address in the files uploaded by user to retrieve vendor email
 
 4. Mandatory Information Collection (Before Sending Email)
 Before calling the Logic App, you must collect all three of the following fields.

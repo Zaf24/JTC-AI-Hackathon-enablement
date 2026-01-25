@@ -113,6 +113,10 @@ export default function Stages() {
       // Navigate to Stage 2 overview or specific step
       if (stepId === '2.1') {
         navigate('/stage/2/step/2.1')
+      } else if (stepId === '2.2') {
+        navigate('/stage/2/step/2.2')
+      } else if (stepId === '2.3') {
+        navigate('/stage/2/step/2.3')
       } else {
         // For other Stage 2 steps, navigate to overview page
         navigate('/stage/2')

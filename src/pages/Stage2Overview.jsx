@@ -84,12 +84,12 @@ export default function Stage2Overview() {
                   Create OpenAPI connections for the Logic Apps workflows. Connect the Vendor Scout Agent to the 
                   RFP automation workflow.
                 </p>
-                <button
-                  disabled
-                  className="inline-block px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed text-sm font-medium"
+                <Link
+                  to="/stage/2/step/2.2"
+                  className="inline-block px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium"
                 >
-                  Coming Soon
-                </button>
+                  Start Step 2.2 →
+                </Link>
               </motion.div>
 
               {/* Step 2.3 */}
@@ -105,12 +105,12 @@ export default function Stage2Overview() {
                 <p className="text-gray-700 mb-4">
                   Test the RFP automation workflows. Validate that emails are sent correctly and responses are tracked properly.
                 </p>
-                <button
-                  disabled
-                  className="inline-block px-4 py-2 bg-gray-300 text-gray-500 rounded-lg cursor-not-allowed text-sm font-medium"
+                <Link
+                  to="/stage/2/step/2.3"
+                  className="inline-block px-4 py-2 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors text-sm font-medium"
                 >
-                  Coming Soon
-                </button>
+                  Start Step 2.3 →
+                </Link>
               </motion.div>
             </div>
           </div>
