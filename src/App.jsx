@@ -11,6 +11,9 @@ import Stage2Overview from './pages/Stage2Overview'
 import Stage2Step1 from './pages/Stage2Step1'
 import Stage2Step2 from './pages/Stage2Step2'
 import Stage2Step3 from './pages/Stage2Step3'
+import Stage3Overview from './pages/Stage3Overview'
+import Stage3Step1 from './pages/Stage3Step1'
+import Stage3Step2 from './pages/Stage3Step2'
 
 function App() {
   return (
@@ -27,6 +30,9 @@ function App() {
         <Route path="/stage/2/step/2.1" element={<Stage2Step1 />} />
         <Route path="/stage/2/step/2.2" element={<Stage2Step2 />} />
         <Route path="/stage/2/step/2.3" element={<Stage2Step3 />} />
+        <Route path="/stage/3" element={<Stage3Overview />} />
+        <Route path="/stage/3/step/3.1" element={<Stage3Step1 />} />
+        <Route path="/stage/3/step/3.2" element={<Stage3Step2 />} />
       </Routes>
     </Layout>
   )
