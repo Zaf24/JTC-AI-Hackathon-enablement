@@ -163,6 +163,35 @@ colors: {
 - **Stages content**: Edit `src/pages/Stages.jsx`
 - **Navigation**: Edit `src/components/Layout.jsx`
 
+## Hackathon Learning Assistant
+
+This site includes a persistent assistant drawer that can call your Foundry agent backend. The assistant sends a stage identifier derived from the current route and keeps chat history in the browser.
+
+### Environment Variables
+
+Set these at build time (for GitHub Pages or any static hosting):
+
+- `VITE_ASSISTANT_API_ENDPOINT` — Full HTTPS endpoint for your backend (for example: `https://your-aca-app.azurecontainerapps.io/api/assistant`).
+- `VITE_ASSISTANT_API_KEY` — Shared key value sent in the `X-AGENT-KEY` header.
+
+### Request Payload
+
+The frontend sends JSON like:
+
+```json
+{
+  "clientId": "uuid",
+  "threadId": "uuid",
+  "stageId": "1",
+  "message": "User input"
+}
+```
+
+### Notes
+
+- The shared key lives in the client bundle, so it should be treated as a lightweight gate, not a secret.
+- The assistant stores `clientId`, `threadId`, `sidebarOpen`, and messages in local storage to persist across pages.
+
 ## Future Enhancements
 
 - Individual stage detail pages with step-by-step instructions
