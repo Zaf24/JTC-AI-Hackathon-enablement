@@ -275,8 +275,15 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
                 }`}
               >
                 {message.role === 'assistant' ? (
-                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-strong:text-inherit prose-a:text-mission-primary prose-a:underline">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-strong:text-inherit prose-a:text-mission-primary">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        a: ({ node, ...props }) => (
+                          <a {...props} className="font-semibold underline" />
+                        )
+                      }}
+                    >
                       {message.content}
                     </ReactMarkdown>
                   </div>
