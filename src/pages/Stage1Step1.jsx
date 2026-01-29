@@ -25,7 +25,7 @@ export default function Stage1Step1() {
               <span className="font-semibold">Call Sign:</span> Vendor Scout
             </p>
             <p className="text-lg text-gray-600">
-              Set up the AI model for vendor matching by creating a Microsoft AI Foundry resource and deploying the GPT-4o model.
+              Set up the AI model for vendor matching by creating a Microsoft AI Foundry resource and deploying the GPT-4.1 model.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Stage1Step1() {
             <h2 className="text-2xl font-bold mb-3">Mission Overview</h2>
             <p className="text-gray-700 leading-relaxed">
               In this step, you'll provision the AI model that will power the Vendor Scout Agent. You'll create a 
-              Microsoft AI Foundry resource and deploy the GPT-4o model, which will be the intelligence behind 
+              Microsoft AI Foundry resource and deploy the GPT-4.1 model, which will be the intelligence behind 
               matching vendors with precision.
             </p>
           </div>
@@ -218,20 +218,20 @@ export default function Stage1Step1() {
                   6
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Select GPT-4o Model</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Select GPT-4.1 Model</h3>
                   <p className="text-gray-700 mb-4">
-                    You'll see a pop-up window showing all available models. Select the GPT-4o model for this session.
+                    You'll see a pop-up window showing all available models. Select the GPT-4.1 model for this session.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>You will be greeted with a pop-up window</li>
                     <li>This is where you can see all the models that you can deploy for your AI solution</li>
-                    <li>For this session, select <strong>"gpt-4o"</strong></li>
+                    <li>For this session, select <strong>"gpt-4.1"</strong></li>
                     <li>Click "Confirm"</li>
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-6.png`}
-                      alt="Select gpt-4o model from pop-up"
+                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-6-update.png`}
+                      alt="Select GPT-4.1 model from pop-up"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Model selection pop-up window</p>
@@ -279,23 +279,23 @@ export default function Stage1Step1() {
                   8
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Rename Model to "Vendor Scout"</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Rename Model to "[Your-Team-Name] Vendor Scout"</h3>
                   <p className="text-gray-700 mb-4">
-                    The model will be deployed with a random name. Rename it to "Vendor Scout" for easy identification.
+                    The model will be deployed with a random name. Rename it to "<strong>[Your-Team-Name] Vendor Scout</strong>" (e.g. "JTC Team A Vendor Scout") for easy identification.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>You will see the model deployed with a random name</li>
                     <li>Click on the name to edit it</li>
-                    <li>Change the name to <strong>"Vendor Scout"</strong></li>
+                    <li>Change the name to <strong>"[Your-Team-Name] Vendor Scout"</strong></li>
                     <li>Save the changes</li>
                   </ol>
                   <div className="mt-4">
                     <img 
                       src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-8.png`}
-                      alt="Rename model to Vendor Scout"
+                      alt="Rename model to [Your-Team-Name] Vendor Scout"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Renamed model to Vendor Scout</p>
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Renamed model to [Your-Team-Name] Vendor Scout</p>
                   </div>
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function Stage1Step1() {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
-                <span>Renamed the model to "Vendor Scout"</span>
+                <span>Renamed the model to "[Your-Team-Name] Vendor Scout"</span>
               </li>
             </ul>
             <div className="mt-4 p-4 bg-green-100 border-l-4 border-green-600 rounded">

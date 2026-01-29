@@ -253,9 +253,14 @@ Best regards,
                   <p className="text-gray-700 mb-4">
                     Select the workflow type and provide a name for your workflow.
                   </p>
+                  <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    <p className="text-amber-900 font-medium">
+                      You will be sharing Logic Apps with other groups; ensure you name your workflows with a unique group name.
+                    </p>
+                  </div>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>On the "Create workflow" pop-up pane, select "Stateful"</li>
-                    <li>Enter the Name: <strong>"RFP-email-automation"</strong></li>
+                    <li>Enter name: <strong>[Your team name]-RFP-Email-automation</strong> (e.g. Team A-RFP-Email-automation)</li>
                     <li>Complete the creation process</li>
                   </ol>
                   <div className="mt-4">
@@ -288,7 +293,7 @@ Best regards,
                     After the workflow is created, open it to access the designer page.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>After the workflow is created, click on the "RFP-email-automation" workflow</li>
+                    <li>After the workflow is created, click on your <strong>[Your team name]-RFP-Email-automation</strong> workflow</li>
                     <li>You will be brought to the "Designer" page</li>
                   </ol>
                 </div>
@@ -403,6 +408,11 @@ Best regards,
                   <p className="text-gray-700 mb-4">
                     Add an action to send the RFP email using Office 365 Outlook.
                   </p>
+                  <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    <p className="text-amber-900 font-medium">
+                      Do not access other teams' workflows and connections — please stick to your own workflows.
+                    </p>
+                  </div>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Click the "+" icon below the trigger node</li>
                     <li>Select "Add an action"</li>
