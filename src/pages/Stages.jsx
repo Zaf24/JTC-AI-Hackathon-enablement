@@ -148,6 +148,32 @@ export default function Stages() {
             This curriculum-style view keeps your team aligned from vendor matching to data-driven insights.
           </p>
 
+          {/* Lab Data Download */}
+          <div className="mb-12 p-6 bg-white rounded-xl shadow-lg border-2 border-mission-primary/20">
+            <h2 className="text-2xl font-bold mb-3 flex items-center">
+              <span className="mr-2">📥</span> Lab Data
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Download the lab data files used in the mission stages.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={`${import.meta.env.BASE_URL}lab-data/JTC-AIF-workshop-vendor-list.pdf`}
+                download="JTC-AIF-workshop-vendor-list.pdf"
+                className="inline-flex items-center px-5 py-2.5 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors font-medium shadow-sm hover:shadow-md"
+              >
+                Vendor List (PDF)
+              </a>
+              <a
+                href={`${import.meta.env.BASE_URL}lab-data/JTC_AI_Hackathon.CSV.csv`}
+                download="JTC_AI_Hackathon.CSV.csv"
+                className="inline-flex items-center px-5 py-2.5 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors font-medium shadow-sm hover:shadow-md"
+              >
+                Vendor Data (CSV)
+              </a>
+            </div>
+          </div>
+
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Curriculum Flight Plan</h2>
             <p className="text-lg text-gray-700 mb-8">
