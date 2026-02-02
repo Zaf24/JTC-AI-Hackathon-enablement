@@ -57,7 +57,7 @@ export default function Stage1Overview() {
                 className="border-2 border-gray-200 rounded-lg p-6 hover:border-mission-primary transition-colors"
               >
                 <div className="text-3xl mb-3">1.1</div>
-                <h3 className="text-xl font-semibold mb-3">Provision Model</h3>
+                <h3 className="text-xl font-semibold mb-3">Provision Agent</h3>
                 <p className="text-gray-700 mb-4">
                   Set up the AI model for vendor matching. You'll create a Microsoft AI Foundry resource and deploy 
                   the GPT-4o model that will power the Vendor Scout Agent.
@@ -165,7 +165,7 @@ export default function Stage1Overview() {
                 to="/stage/1/step/1.1"
                 className="px-6 py-3 bg-white text-mission-primary rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-200 shadow-lg hover:shadow-xl text-center"
               >
-                Start Step 1.1: Provision Model →
+                Start Step 1.1: Provision Agent →
               </Link>
               <Link
                 to="/stages"

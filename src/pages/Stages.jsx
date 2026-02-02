@@ -25,7 +25,7 @@ const stages = [
     steps: [
       {
         id: '1.1',
-        name: 'Provision Model',
+        name: 'Provision Agent',
         description: 'Provision the AI model for vendor matching.'
       },
       {
@@ -148,30 +148,21 @@ export default function Stages() {
             This curriculum-style view keeps your team aligned from vendor matching to data-driven insights.
           </p>
 
-          {/* Lab Data Download */}
+          {/* Required Pre-reading */}
           <div className="mb-12 p-6 bg-white rounded-xl shadow-lg border-2 border-mission-primary/20">
-            <h2 className="text-2xl font-bold mb-3 flex items-center">
-              <span className="mr-2">📥</span> Lab Data
+            <h2 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="mr-2">📖</span> Required Pre-reading
             </h2>
-            <p className="text-gray-700 mb-4">
-              Download the lab data files used in the mission stages.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={`${import.meta.env.BASE_URL}lab-data/JTC-AIF-workshop-vendor-list.pdf`}
-                download="JTC-AIF-workshop-vendor-list.pdf"
-                className="inline-flex items-center px-5 py-2.5 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors font-medium shadow-sm hover:shadow-md"
-              >
-                Vendor List (PDF)
-              </a>
-              <a
-                href={`${import.meta.env.BASE_URL}lab-data/JTC_AI_Hackathon.CSV.csv`}
-                download="JTC_AI_Hackathon.CSV.csv"
-                className="inline-flex items-center px-5 py-2.5 bg-mission-primary text-white rounded-lg hover:bg-mission-primary/90 transition-colors font-medium shadow-sm hover:shadow-md"
-              >
-                Vendor Data (CSV)
-              </a>
-            </div>
+            <ul className="space-y-4 text-gray-700">
+              <li className="flex items-start">
+                <span className="font-semibold text-mission-primary mr-2">1.</span>
+                You will be using the Virtual machine to access Microsoft Foundry only. The Azure portal and steps in Stage 2.1 will be done on your physical machine (Laptops).
+              </li>
+              <li className="flex items-start">
+                <span className="font-semibold text-mission-primary mr-2">2.</span>
+                The data files for this hands-on lab are pre-loaded into the virtual machine for you. However, for your own hackathon solution, you will have to use FileZilla (refer to JTC guide) to bring your data files into the VM.
+              </li>
+            </ul>
           </div>
 
           <div className="mb-12">

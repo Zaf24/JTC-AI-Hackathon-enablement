@@ -187,17 +187,17 @@ Best regards,
                     Go to the Resource group created for you for this session and access the Logic Apps.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>Go to the Resource group created for you for this session</li>
+                    <li>Go to the resource group pre-created for you <strong>rg-hackathon-prd-i01</strong></li>
                     <li>You will see the resource group page</li>
-                    <li>Click on the logic apps pre-created for you in this Resource Group</li>
+                    <li>Click on the logic apps pre-created for you - <strong>aaf-hackathon-prdizapp-i02</strong></li>
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-2.png`}
-                      alt="Resource group page with Logic Apps"
+                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-2-updated.jpeg`}
+                      alt="Logic apps page showing rg-hackathon-prd-i01 and aaf-hackathon-prdizapp-i02"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Resource group page showing Logic Apps</p>
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Logic apps page showing rg-hackathon-prd-i01 and aaf-hackathon-prdizapp-i02</p>
                   </div>
                 </div>
               </div>
@@ -416,10 +416,18 @@ Best regards,
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Click the "+" icon below the trigger node</li>
                     <li>Select "Add an action"</li>
-                    <li>Look for the "Office 365 Outlook" connector</li>
+                    <li>Look for the <strong>"Office 365 Outlook"</strong> connector</li>
                     <li>Add a "Send an E-mail (V2)" node</li>
                     <li>The pop-up side pane will request you to sign in - click "Sign in" and create the connection</li>
                   </ol>
+                  <div className="mt-4">
+                    <img 
+                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-8-updated.png`}
+                      alt="Add action with Office 365 Outlook connector"
+                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
+                    />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Add action with Office 365 Outlook connector</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -531,7 +539,7 @@ Best regards,
                     <li>Click on the Lightning symbol next to each placeholder</li>
                     <li>Select the matching dynamic content from the available options:
                       <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                        <li><strong>{'{{'}VendorName{'}}'}</strong> → Select "name" from vendor object</li>
+                        <li><strong>{'{{'}VendorName{'}}'}</strong> → Select "name" from vendor object (Click on see more and choose the second "name" option - the first "name" that you see, is the requestor name. The second "name" will be the vendor name)</li>
                         <li><strong>{'{{'}EventSummary{'}}'}</strong> → Select "eventSummary" from rfp object</li>
                         <li><strong>{'{{'}ItemsSummary{'}}'}</strong> → Select "itemsSummary" from rfp object</li>
                         <li><strong>{'{{'}ExpectedDeliveryDate{'}}'}</strong> → Select "expectedDeliveryDate" from rfp object</li>
@@ -541,7 +549,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-12.png`}
+                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-11-updated.png`}
                       alt="Email body with dynamic content replacement example"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
