@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const STORAGE_KEYS = {
   clientId: 'assistant.clientId',
@@ -44,6 +46,20 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
   const apiEndpoint = useMemo(() => {
     return normalizeEndpoint(import.meta.env.VITE_ASSISTANT_API_ENDPOINT)
   }, [])
+
+  const requestUrl = useMemo(() => {
+    if (!apiEndpoint) return ''
+    return apiEndpoint.endsWith('/api/assistant')
+      ? apiEndpoint
+      : `${apiEndpoint}/api/assistant`
+  }, [apiEndpoint])
+
+  const streamUrl = useMemo(() => {
+    if (!apiEndpoint) return ''
+    return apiEndpoint.endsWith('/api/assistant')
+      ? `${apiEndpoint}/stream`
+      : `${apiEndpoint}/api/assistant/stream`
+  }, [apiEndpoint])
 
   const apiKey = useMemo(() => import.meta.env.VITE_ASSISTANT_API_KEY || '', [])
 
@@ -129,11 +145,28 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
     })
   }
 
+  const updateMessageContent = (messageId, nextContent) => {
+    setThreads((prevThreads) => {
+      const thread = prevThreads[threadId]
+      if (!thread) return prevThreads
+      const updatedMessages = thread.messages.map((message) =>
+        message.id === messageId ? { ...message, content: nextContent } : message
+      )
+      return {
+        ...prevThreads,
+        [threadId]: {
+          ...thread,
+          messages: updatedMessages
+        }
+      }
+    })
+  }
+
   const handleSend = async () => {
     const trimmed = messageInput.trim()
     if (!trimmed || isSending) return
 
-    if (!apiEndpoint) {
+    if (!requestUrl) {
       setErrorMessage('Assistant endpoint is not configured.')
       return
     }
@@ -149,13 +182,21 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
     }
 
     appendMessage(userMessage)
+    const assistantMessageId = generateId()
+    appendMessage({
+      id: assistantMessageId,
+      role: 'assistant',
+      content: '',
+      timestamp: new Date().toISOString()
+    })
     setMessageInput('')
 
     try {
-      const response = await fetch(apiEndpoint, {
+      const response = await fetch(streamUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'text/event-stream',
           'X-AGENT-KEY': apiKey
         },
         body: JSON.stringify({
@@ -170,23 +211,55 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
         throw new Error(`Request failed with status ${response.status}`)
       }
 
-      const data = await response.json()
-      const replyText =
-        data?.attributes?.output?.messages?.[0] ||
-        data?.output?.messages?.[0] ||
-        data?.reply ||
-        data?.message ||
-        data?.output_text ||
-        data?.outputText ||
-        data?.response ||
-        'I am ready to help. Could you provide more detail?'
+      const contentType = response.headers.get('content-type') || ''
+      if (!contentType.includes('text/event-stream') || !response.body) {
+        const data = await response.json()
+        const replyText =
+          data?.attributes?.output?.messages?.[0] ||
+          data?.output?.messages?.[0] ||
+          data?.reply ||
+          data?.message ||
+          data?.output_text ||
+          data?.outputText ||
+          data?.response ||
+          'I am ready to help. Could you provide more detail?'
 
-      appendMessage({
-        id: generateId(),
-        role: 'assistant',
-        content: replyText,
-        timestamp: new Date().toISOString()
-      })
+        updateMessageContent(assistantMessageId, replyText)
+        return
+      }
+
+      const reader = response.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
+      let streamedText = ''
+
+      while (true) {
+        const { value, done } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+
+        const chunks = buffer.split('\n\n')
+        buffer = chunks.pop() || ''
+
+        for (const chunk of chunks) {
+          const line = chunk.split('\n').find((entry) => entry.startsWith('data: '))
+          if (!line) continue
+          const payloadText = line.replace(/^data:\s*/, '')
+          if (!payloadText) continue
+          const data = JSON.parse(payloadText)
+          if (data.error) {
+            throw new Error(data.error)
+          }
+          if (data.delta) {
+            streamedText += data.delta
+            updateMessageContent(assistantMessageId, streamedText)
+          }
+          if (data.done) {
+            updateMessageContent(assistantMessageId, streamedText)
+            return
+          }
+        }
+      }
     } catch (error) {
       setErrorMessage(error.message || 'Something went wrong.')
     } finally {
@@ -272,7 +345,22 @@ export default function HackathonAssistant({ stageId, onOpenChange }) {
                     : 'mr-auto bg-gray-100 text-gray-800'
                 }`}
               >
-                {message.content}
+                {message.role === 'assistant' ? (
+                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-ol:my-2 prose-li:my-1 prose-strong:text-inherit prose-a:text-mission-primary">
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm]}
+                      components={{
+                        a: ({ node, ...props }) => (
+                          <a {...props} className="font-semibold underline" />
+                        )
+                      }}
+                    >
+                      {message.content}
+                    </ReactMarkdown>
+                  </div>
+                ) : (
+                  message.content
+                )}
               </div>
             ))
           )}
