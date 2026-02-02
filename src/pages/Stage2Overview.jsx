@@ -43,6 +43,24 @@ export default function Stage2Overview() {
             </p>
           </div>
 
+          {/* Important Note */}
+          <div className="bg-amber-50 border-2 border-amber-400 rounded-xl p-6 mb-8 shadow-md">
+            <h3 className="text-xl font-bold text-amber-900 mb-3 flex items-center">
+              <span className="mr-2" aria-hidden="true">⚠️</span>
+              Important — Please Read
+            </h3>
+            <ul className="space-y-2 text-amber-900 font-medium">
+              <li className="flex items-start">
+                <span className="mr-2 mt-0.5">1.</span>
+                You will be sharing Logic Apps with other groups; ensure you name your workflows with a unique group name.
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2 mt-0.5">2.</span>
+                Do not access other teams' workflows and connections — please stick to your own workflows.
+              </li>
+            </ul>
+          </div>
+
           {/* Stage Steps */}
           <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold mb-6">Stage 2 Steps</h2>

@@ -182,7 +182,7 @@ Do not return:
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>In the Code Interpreter configuration, click <strong>Select local files</strong></li>
-                    <li>Choose the file <strong>Vendor_review_JTC_AI_Hackathon.csv</strong> from the course materials</li>
+                    <li>Choose the file <strong>Vendor_review_JTC_AI_Hackathon.csv</strong> from the C:Drive &gt; HackathonEnablementData</li>
                     <li>Click <strong>Upload and save</strong> to attach the CSV to the agent</li>
                   </ol>
                   <div className="mt-4">

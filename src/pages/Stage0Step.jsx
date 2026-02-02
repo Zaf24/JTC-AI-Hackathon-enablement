@@ -63,7 +63,7 @@ export default function Stage0Step() {
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Open your web browser and go to <a href="https://portal.azure.com" target="_blank" rel="noopener noreferrer" className="text-mission-primary hover:underline">https://portal.azure.com</a></li>
                     <li>You will be prompted to sign in</li>
-                    <li>Sign in using your hackathon credentials</li>
+                    <li>Sign in using your tech pass credentials</li>
                     <li>You will see the Azure Portal homepage</li>
                   </ol>
                 </div>
@@ -83,22 +83,17 @@ export default function Stage0Step() {
                   2
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Identify Your Resource Group</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Go to Virtual machines</h3>
                   <p className="text-gray-700 mb-4">
-                    On the Azure Portal homepage, identify the "Resource Group" that has been created for you for this session.
+                    &quot;Virtual machines&quot; may appear on your Azure Portal home page. In this case, just click on the button. Otherwise, look up Virtual machines in the search bar.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>The facilitators will give you the name of your resource group</li>
-                    <li>Look for the resource group in the "recent" section on the homepage</li>
-                    <li>If you don't see the resource group in the "recent" section, search for it using the search bar at the top of the page</li>
+                    <li>On the Azure Portal home page, look for &quot;Virtual machines&quot;</li>
+                    <li>If visible, click on it; otherwise search for &quot;Virtual machines&quot; in the search bar</li>
                   </ol>
                   <div className="mt-4">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-0-step-2.png`}
-                      alt="Azure Portal homepage showing Resource Group"
-                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
-                    />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Azure Portal homepage with Resource Group</p>
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-2-vm.png`} alt="Azure Portal Virtual machines" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Azure Portal with Virtual machines</p>
                   </div>
                 </div>
               </div>
@@ -109,7 +104,7 @@ export default function Stage0Step() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
               className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
             >
               <div className="flex items-start mb-4">
@@ -117,9 +112,155 @@ export default function Stage0Step() {
                   3
                 </div>
                 <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">Click on the jumphost VM</h3>
+                  <p className="text-gray-700 mb-4">
+                    Click on the jumphost VM that your team has been assigned to (see Appendix A for your team&apos;s VM).
+                  </p>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
+                    <li>From the Virtual machines list, locate your team&apos;s jumphost VM</li>
+                    <li>Click on it to open the VM landing page</li>
+                  </ol>
+                  <div className="mt-4">
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-3.png`} alt="Jumphost VM selection" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Select your team&apos;s jumphost VM</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Step 4 */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                  4
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">Click on Connect via Bastion</h3>
+                  <p className="text-gray-700 mb-4">
+                    On the landing page for your team&apos;s VM, hover over &quot;Connect&quot; and click &quot;Connect via Bastion&quot;.
+                  </p>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
+                    <li>On your team&apos;s VM page, find the Connect option</li>
+                    <li>Hover over &quot;Connect&quot; and select &quot;Connect via Bastion&quot;</li>
+                  </ol>
+                  <div className="mt-4">
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-4-bastion.png`} alt="Connect via Bastion" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Connect via Bastion option</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Step 5 */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.25 }}
+              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                  5
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">Connect via Bastion</h3>
+                  <p className="text-gray-700 mb-4">
+                    Protocol should be set to RDP. Port should be set to 3389. Authentication Type should be set to VM Password. Log in with your GCC AD credentials (not your usual Windows AD login). You might be prompted to change password on first log in.
+                  </p>
+                  <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-lg mb-4">
+                    <p className="text-amber-900 font-medium">Note that each VM can only support two concurrent users. If more than two users try to access the VM, you will be prompted to boot one user out.</p>
+                  </div>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
+                    <li>Set Protocol to RDP, Port to 3389, Authentication Type to VM Password</li>
+                    <li>Log in with your GCC AD credentials</li>
+                    <li>Your VM should appear in a new window</li>
+                  </ol>
+                  <div className="mt-4">
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-5.png`} alt="Connect via Bastion settings" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Bastion connection settings</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Step 6 */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                  6
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">Change GCC AD password (first-time log in only)</h3>
+                  <p className="text-gray-700 mb-4">
+                    Only for first-time log in for each user: Change your GCC AD password. Press <strong>Ctrl+Alt+End</strong> on your keyboard. (On the HP Dragonfly, this would be Ctrl+Alt+Function+Right button.) Change your password to your own password. This will be your new GCC AD password for the jumphost VM. Make sure to remember this password!
+                  </p>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
+                    <li>Press Ctrl+Alt+End (or Ctrl+Alt+Function+Right on HP Dragonfly)</li>
+                    <li>Change your password when prompted</li>
+                    <li>Remember your new GCC AD password for future VM access</li>
+                  </ol>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Step 7 */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                  7
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-semibold mb-2">Launch Microsoft Edge on your VM desktop</h3>
+                  <p className="text-gray-700 mb-4">
+                    On your VM desktop, open Microsoft Edge. You will use this browser to access Microsoft AI Foundry in the next step.
+                  </p>
+                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
+                    <li>On the VM desktop, launch Microsoft Edge</li>
+                    <li>You will use this browser for Microsoft AI Foundry in Step 8</li>
+                  </ol>
+                  <div className="mt-4">
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-7.png`} alt="Microsoft Edge on VM desktop" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Launch Microsoft Edge on VM</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Step 8 */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
+            >
+              <div className="flex items-start mb-4">
+                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
+                  8
+                </div>
+                <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Navigate to Microsoft AI Foundry</h3>
                   <p className="text-gray-700 mb-4">
-                    Go to Microsoft AI Foundry. You should be logged in with the same account you used to log in to Azure Portal in step 1.
+                    Go to Microsoft AI Foundry. You should be logged in with the same account you used to log in to Azure Portal in Step 1.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Open a new tab or window in your browser</li>
@@ -131,17 +272,17 @@ export default function Stage0Step() {
               </div>
             </motion.div>
 
-            {/* Step 4 */}
+            {/* Step 9 */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
               className="mb-8"
             >
               <div className="flex items-start mb-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  4
+                  9
                 </div>
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Verify Setup Complete</h3>
@@ -183,7 +324,19 @@ export default function Stage0Step() {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
-                <span>Identified the Resource Group created for this session</span>
+                <span>Navigated to Virtual machines and selected your team&apos;s jumphost VM</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">☑</span>
+                <span>Connected via Bastion with GCC AD credentials</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">☑</span>
+                <span>Changed GCC AD password on first-time log in (if applicable)</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">☑</span>
+                <span>Launched Microsoft Edge on VM desktop</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
@@ -214,7 +367,7 @@ export default function Stage0Step() {
               <ul className="space-y-2 text-blue-100 mb-4">
                 <li className="flex items-start">
                   <span className="mr-2">🔹</span>
-                  <span><strong>1.1 Provision Model:</strong> Set up the AI model for vendor matching</span>
+                  <span><strong>1.1 Provision Agent:</strong> Set up the AI model for vendor matching</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">🔹</span>

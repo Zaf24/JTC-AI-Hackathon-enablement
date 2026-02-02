@@ -25,7 +25,7 @@ const stages = [
     steps: [
       {
         id: '1.1',
-        name: 'Provision Model',
+        name: 'Provision Agent',
         description: 'Provision the AI model for vendor matching.'
       },
       {
@@ -147,6 +147,23 @@ export default function Stages() {
             Plot each mission that brings Procurement Command Center to life. 
             This curriculum-style view keeps your team aligned from vendor matching to data-driven insights.
           </p>
+
+          {/* Required Pre-reading */}
+          <div className="mb-12 p-6 bg-white rounded-xl shadow-lg border-2 border-mission-primary/20">
+            <h2 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="mr-2">📖</span> Required Pre-reading
+            </h2>
+            <ul className="space-y-4 text-gray-700">
+              <li className="flex items-start">
+                <span className="font-semibold text-mission-primary mr-2">1.</span>
+                You will be using the Virtual machine to access Microsoft Foundry only. The Azure portal and steps in Stage 2.1 will be done on your physical machine (Laptops).
+              </li>
+              <li className="flex items-start">
+                <span className="font-semibold text-mission-primary mr-2">2.</span>
+                The data files for this hands-on lab are pre-loaded into the virtual machine for you. However, for your own hackathon solution, you will have to use FileZilla (refer to JTC guide) to bring your data files into the VM.
+              </li>
+            </ul>
+          </div>
 
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-6">Curriculum Flight Plan</h2>

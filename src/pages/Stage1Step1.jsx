@@ -19,13 +19,13 @@ export default function Stage1Step1() {
               <span className="mr-2">←</span> Back to Stage 1 Overview
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              🔍 Stage 1.1: Provision Model
+              🔍 Stage 1.1: Provision Agent
             </h1>
             <p className="text-xl text-gray-700 mb-2">
               <span className="font-semibold">Call Sign:</span> Vendor Scout
             </p>
             <p className="text-lg text-gray-600">
-              Set up the AI model for vendor matching by creating a Microsoft AI Foundry resource and deploying the GPT-4o model.
+              Set up the AI model for vendor matching by creating a Microsoft AI Foundry resource and deploying the GPT-4.1 model.
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Stage1Step1() {
             <h2 className="text-2xl font-bold mb-3">Mission Overview</h2>
             <p className="text-gray-700 leading-relaxed">
               In this step, you'll provision the AI model that will power the Vendor Scout Agent. You'll create a 
-              Microsoft AI Foundry resource and deploy the GPT-4o model, which will be the intelligence behind 
+              Microsoft AI Foundry resource and deploy the GPT-4.1 model, which will be the intelligence behind 
               matching vendors with precision.
             </p>
           </div>
@@ -82,21 +82,21 @@ export default function Stage1Step1() {
                   2
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Create New Resource</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Identify Pre-Created Resource</h3>
                   <p className="text-gray-700 mb-4">
-                    At the home page, click on "Create New" to start creating your Microsoft AI Foundry resource.
+                    At the home page, identify the resource pre-created for you.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>On the Microsoft AI Foundry home page, locate the "Create New" button</li>
-                    <li>Click on "Create New"</li>
+                    <li>On the Microsoft AI Foundry Overview (home) page, locate the resource in the dropdown or Endpoints and keys section</li>
+                    <li>The resource name is <strong>aaf-hackathon-prdizapp-i02jyfn</strong> (ends with i02jyfn)</li>
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-2.png`}
-                      alt="Click Create New on Microsoft AI Foundry home page"
+                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-2-updated.png`}
+                      alt="Microsoft AI Foundry Overview page showing resource aaf-hackathon-prdizapp-i02jyfn"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Microsoft AI Foundry home page with Create New button</p>
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Microsoft AI Foundry Overview page with pre-created resource</p>
                   </div>
                 </div>
               </div>
@@ -113,75 +113,6 @@ export default function Stage1Step1() {
               <div className="flex items-start mb-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
                   3
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Select Microsoft Foundry Resource</h3>
-                  <p className="text-gray-700 mb-4">
-                    Select the resource type for your AI solution.
-                  </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>From the options presented, select "Microsoft Foundry Resource"</li>
-                    <li>Click "Next" to proceed</li>
-                  </ol>
-                  <div className="mt-4">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-3.png`}
-                      alt="Select Microsoft Foundry Resource"
-                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
-                    />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Select Microsoft Foundry Resource option</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Step 4 */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
-            >
-              <div className="flex items-start mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  4
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Name Your Resource and Select Region</h3>
-                  <p className="text-gray-700 mb-4">
-                    Configure your resource with a name and ensure it's in the correct resource group.
-                  </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>Name the resource with your preferred name</li>
-                    <li><strong>Important:</strong> Ensure the resource group your project is created in is the same resource group as the one created for you for this session</li>
-                    <li>If you're unsure about the resource group, check with your facilitators</li>
-                    <li>Select <strong>Region: Southeast Asia</strong></li>
-                    <li>Complete the creation process</li>
-                  </ol>
-                  <div className="mt-4">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-4-.png`}
-                      alt="Name resource and select region"
-                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
-                    />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Resource configuration page</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Step 5 */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
-            >
-              <div className="flex items-start mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  5
                 </div>
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Navigate to Agents</h3>
@@ -205,97 +136,36 @@ export default function Stage1Step1() {
               </div>
             </motion.div>
 
-            {/* Step 6 */}
+            {/* Step 4 */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
-            >
-              <div className="flex items-start mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  6
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Select GPT-4o Model</h3>
-                  <p className="text-gray-700 mb-4">
-                    You'll see a pop-up window showing all available models. Select the GPT-4o model for this session.
-                  </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>You will be greeted with a pop-up window</li>
-                    <li>This is where you can see all the models that you can deploy for your AI solution</li>
-                    <li>For this session, select <strong>"gpt-4o"</strong></li>
-                    <li>Click "Confirm"</li>
-                  </ol>
-                  <div className="mt-4">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-6.png`}
-                      alt="Select gpt-4o model from pop-up"
-                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
-                    />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Model selection pop-up window</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Step 7 */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="mb-8 pb-8 border-b border-gray-200 last:border-b-0"
-            >
-              <div className="flex items-start mb-4">
-                <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  7
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Configure Deployment Type</h3>
-                  <p className="text-gray-700 mb-4">
-                    Configure the deployment settings for your model.
-                  </p>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>In the pop-up window, set the deployment type to <strong>"Global Standard"</strong></li>
-                    <li>Click "Deploy"</li>
-                    <li>Wait for the deployment to complete</li>
-                  </ol>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Step 8 */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.7 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="mb-8"
             >
               <div className="flex items-start mb-4">
                 <div className="flex-shrink-0 w-10 h-10 bg-mission-primary text-white rounded-full flex items-center justify-center font-bold text-lg mr-4">
-                  8
+                  4
                 </div>
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-semibold mb-2">Rename Model to "Vendor Scout"</h3>
+                  <h3 className="text-2xl font-semibold mb-2">Rename agent to "[Your-Team-Name] Vendor Scout"</h3>
                   <p className="text-gray-700 mb-4">
-                    The model will be deployed with a random name. Rename it to "Vendor Scout" for easy identification.
+                    The agent will be deployed with a random name. Rename it to "<strong>[Your-Team-Name] Vendor Scout</strong>" (e.g. "JTC Team A Vendor Scout") for easy identification.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>You will see the model deployed with a random name</li>
+                    <li>You will see the agent deployed with a random name</li>
                     <li>Click on the name to edit it</li>
-                    <li>Change the name to <strong>"Vendor Scout"</strong></li>
+                    <li>Change the name to <strong>"[Your-Team-Name] Vendor Scout"</strong></li>
                     <li>Save the changes</li>
                   </ol>
                   <div className="mt-4">
                     <img 
                       src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-8.png`}
-                      alt="Rename model to Vendor Scout"
+                      alt="Rename model to [Your-Team-Name] Vendor Scout"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Renamed model to Vendor Scout</p>
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Renamed model to [Your-Team-Name] Vendor Scout</p>
                   </div>
                 </div>
               </div>
@@ -330,7 +200,7 @@ export default function Stage1Step1() {
               </li>
               <li className="flex items-start">
                 <span className="mr-2">☑</span>
-                <span>Renamed the model to "Vendor Scout"</span>
+                <span>Renamed the agent to "[Your-Team-Name] Vendor Scout"</span>
               </li>
             </ul>
             <div className="mt-4 p-4 bg-green-100 border-l-4 border-green-600 rounded">

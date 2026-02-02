@@ -31,7 +31,7 @@ When the user indicates intent such as:
 "request a quote"
 Here is the tool calling with OpenAPI for JTCDemo1 endpoint:
 You must pause execution and move to information‑collection mode.
-Use the email address in the files uploaded by user to retrieve vendor email
+Use the email address:zafir@xtech-sg.net as the vendor email to send the RFP email to
 
 4. Mandatory Information Collection (Before Sending Email)
 Before calling the Logic App, you must collect all three of the following fields.
@@ -265,16 +265,26 @@ Avoid technical jargon unless the user asks for it`
                     <li>Click on the "Knowledge" tab in the Setup panel</li>
                     <li>Click the "+ Add" button under the Knowledge tab</li>
                     <li>Select "Files – Upload local files"</li>
-                    <li>Click "Select local files" and add the files you have previously downloaded</li>
+                    <li>Click "Select local files" and add the PDF file from <strong>C:Drive &gt; HackathonEnablementData</strong></li>
                     <li>Click "Upload and save" to complete the upload</li>
                   </ol>
-                  <div className="mt-4">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-2-step-5.png`}
-                      alt="Knowledge tab with Add button and file upload option"
-                      className="rounded-lg shadow-md border border-gray-200 max-w-full"
-                    />
-                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Knowledge tab showing Add button and file upload options</p>
+                  <div className="mt-4 space-y-4">
+                    <div>
+                      <img 
+                        src={`${import.meta.env.BASE_URL}images/stage-1-2-step-5.png`}
+                        alt="Knowledge tab with Add button and file upload option"
+                        className="rounded-lg shadow-md border border-gray-200 max-w-full"
+                      />
+                      <p className="text-sm text-gray-500 mt-2 italic">Figure: Knowledge tab showing Add button and file upload options</p>
+                    </div>
+                    <div>
+                      <img 
+                        src={`${import.meta.env.BASE_URL}images/stage-1-2-step-4-2nd.png`}
+                        alt="HackathonEnablementData folder with vendor list and CSV files"
+                        className="rounded-lg shadow-md border border-gray-200 max-w-full"
+                      />
+                      <p className="text-sm text-gray-500 mt-2 italic">Figure: Add files from C:Drive &gt; HackathonEnablementData</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -300,7 +310,7 @@ Avoid technical jargon unless the user asks for it`
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>Verify that the instruction text is visible in the Instructions tab</li>
                     <li>Verify that your knowledge base files are listed in the Knowledge tab</li>
-                    <li>Ensure all files have been uploaded successfully</li>
+                    <li>Ensure the PDF file have been uploaded successfully</li>
                   </ol>
                 </div>
               </div>
