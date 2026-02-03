@@ -13,19 +13,37 @@ export function getBasename() {
   return '/' + first
 }
 
+let cachedImageBase = null
+
 /**
- * Relative path to an image in public/images/. Works at any route depth and any base URL.
+ * Full URL base where the app is deployed (origin + path to app root, with trailing slash).
+ * Derived from the main script src so it works regardless of pathname or repo name.
+ */
+function getImageBaseUrl() {
+  if (cachedImageBase) return cachedImageBase
+  if (typeof document === 'undefined') return ''
+  const script = document.querySelector('script[type="module"][src*="assets/"]')
+  if (!script || !script.src) {
+    cachedImageBase = window.location.origin + '/'
+    return cachedImageBase
+  }
+  try {
+    const url = new URL(script.src)
+    const path = url.pathname.replace(/\/assets\/[^/]+$/, '/')
+    cachedImageBase = url.origin + path
+    return cachedImageBase
+  } catch {
+    cachedImageBase = window.location.origin + '/'
+    return cachedImageBase
+  }
+}
+
+/**
+ * Full URL to an image in public/images/. Derived from where the app script loaded,
+ * so images work on any route, after navigation, and regardless of repo name/casing.
  * Use for image src: src={getImagePath('azure-ai-icon.png')}
  */
 export function getImagePath(filename) {
-  if (typeof window === 'undefined') return `/images/${filename}`
-  const pathname = window.location.pathname
-  const segments = pathname.split('/').filter(Boolean)
-  const appRoutes = ['stages', 'stage']
-  const first = segments[0]
-  // How many path segments are "above" the app root (repo name or root)?
-  const baseSegmentCount = !first || appRoutes.includes(first) ? 0 : 1
-  const depth = Math.max(0, segments.length - baseSegmentCount)
-  const prefix = depth === 0 ? '' : '../'.repeat(depth)
-  return `${prefix}images/${filename}`
+  const base = getImageBaseUrl()
+  return base + 'images/' + filename
 }

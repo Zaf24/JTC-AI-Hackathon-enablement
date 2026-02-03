@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Ignite: Procurement Command Centre – Mission: Ignite the Best Vendor Match</title>
+    <!-- Set base href so script/css and relative image paths work on refresh at any route (e.g. .../stage/1/step/1.1) -->
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        var parts = path.split('/').filter(Boolean);
+        var first = parts[0];
+        var isAppRoute = first === 'stages' || first === 'stage';
+        var basePath = (!first || isAppRoute) ? '' : '/' + first;
+        var base = window.location.origin + basePath + '/';
+        var el = document.createElement('base');
+        el.href = base;
+        document.head.appendChild(el);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
