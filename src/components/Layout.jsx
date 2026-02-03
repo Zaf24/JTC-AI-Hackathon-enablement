@@ -1,7 +1,19 @@
 import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import HackathonAssistant from './HackathonAssistant'
-import { useState } from 'react'
+import { useState, Component, Suspense, lazy } from 'react'
+
+const HackathonAssistant = lazy(() => import('./HackathonAssistant'))
+
+class AssistantErrorBoundary extends Component {
+  state = { hasError: false }
+  static getDerivedStateFromError() {
+    return { hasError: true }
+  }
+  render() {
+    if (this.state.hasError) return null
+    return this.props.children
+  }
+}
 
 export default function Layout({ children }) {
   const location = useLocation()
@@ -73,7 +85,11 @@ export default function Layout({ children }) {
         </motion.div>
       </main>
 
-      <HackathonAssistant stageId={stageId} onOpenChange={setAssistantOpen} />
+      <AssistantErrorBoundary>
+        <Suspense fallback={null}>
+          <HackathonAssistant stageId={stageId} onOpenChange={setAssistantOpen} />
+        </Suspense>
+      </AssistantErrorBoundary>
 
       <footer className="bg-gray-800 text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
