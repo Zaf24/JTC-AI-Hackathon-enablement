@@ -260,14 +260,18 @@ export default function Stage0Step() {
                 <div className="flex-grow">
                   <h3 className="text-2xl font-semibold mb-2">Navigate to Microsoft AI Foundry</h3>
                   <p className="text-gray-700 mb-4">
-                    Go to Microsoft AI Foundry. You should be logged in with the same account you used to log in to Azure Portal in Step 1.
+                    Sign in to Azure AI Foundry using your JTC email via the techpass.gov.sg organization.
                   </p>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
-                    <li>Open a new tab or window in your browser</li>
                     <li>Go to <a href="https://ai.azure.com" target="_blank" rel="noopener noreferrer" className="text-mission-primary hover:underline">https://ai.azure.com</a></li>
-                    <li>You should be automatically logged in with the same account you used for Azure Portal</li>
-                    <li>If prompted to sign in, use the same hackathon credentials</li>
+                    <li>Click on &quot;Sign in options&quot;, followed by &quot;Sign in to an organization&quot;</li>
+                    <li>Type in &quot;techpass.gov.sg&quot;</li>
+                    <li>Enter your JTC email on the techpass screen</li>
                   </ol>
+                  <div className="mt-4">
+                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-8.jpeg`} alt="Azure AI Foundry sign-in page with Sign in options" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <p className="text-sm text-gray-500 mt-2 italic">Figure: Sign in to Azure AI Foundry — Sign in options</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -289,6 +293,11 @@ export default function Stage0Step() {
                   <p className="text-gray-700 mb-4">
                     Confirm that you have successfully accessed Microsoft AI Foundry.
                   </p>
+                  <div className="bg-blue-50 border-l-4 border-mission-primary p-4 rounded-r-lg mb-4">
+                    <p className="text-gray-800 font-medium">
+                      Look for the project <strong>&quot;hackathon-project01&quot;</strong> — that is the project pre-created for you for this session.
+                    </p>
+                  </div>
                   <ol className="list-decimal list-inside space-y-2 text-gray-700 ml-6">
                     <li>You should see the Microsoft AI Foundry page</li>
                     <li>Verify that you are logged in with the correct account</li>
