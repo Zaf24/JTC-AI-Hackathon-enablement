@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Home() {
   return (
@@ -57,7 +58,7 @@ export default function Home() {
             >
               <figure className="relative">
                 <img 
-                  src={`${import.meta.env.BASE_URL}images/azure-ai-icon.png`}
+                  src={getImagePath('azure-ai-icon.png')}
                   alt="Azure AI – Your intelligent procurement mission control" 
                   className="w-full max-w-lg transform hover:scale-105 transition-transform duration-300"
                 />

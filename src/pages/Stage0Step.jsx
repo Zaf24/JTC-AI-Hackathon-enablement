@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage0Step() {
   return (
@@ -92,7 +93,7 @@ export default function Stage0Step() {
                     <li>If visible, click on it; otherwise search for &quot;Virtual machines&quot; in the search bar</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-2-vm.png`} alt="Azure Portal Virtual machines" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-2-vm.png')} alt="Azure Portal Virtual machines" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Azure Portal with Virtual machines</p>
                   </div>
                 </div>
@@ -121,7 +122,7 @@ export default function Stage0Step() {
                     <li>Click on it to open the VM landing page</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-3.png`} alt="Jumphost VM selection" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-3.png')} alt="Jumphost VM selection" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Select your team&apos;s jumphost VM</p>
                   </div>
                 </div>
@@ -150,7 +151,7 @@ export default function Stage0Step() {
                     <li>Hover over &quot;Connect&quot; and select &quot;Connect via Bastion&quot;</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-4-bastion.png`} alt="Connect via Bastion" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-4-bastion.png')} alt="Connect via Bastion" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Connect via Bastion option</p>
                   </div>
                 </div>
@@ -183,7 +184,7 @@ export default function Stage0Step() {
                     <li>Your VM should appear in a new window</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-5.png`} alt="Connect via Bastion settings" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-5.png')} alt="Connect via Bastion settings" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Bastion connection settings</p>
                   </div>
                 </div>
@@ -238,7 +239,7 @@ export default function Stage0Step() {
                     <li>You will use this browser for Microsoft AI Foundry in Step 8</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-7.png`} alt="Microsoft Edge on VM desktop" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-7.png')} alt="Microsoft Edge on VM desktop" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Launch Microsoft Edge on VM</p>
                   </div>
                 </div>
@@ -269,7 +270,7 @@ export default function Stage0Step() {
                     <li>Enter your JTC email on the techpass screen</li>
                   </ol>
                   <div className="mt-4">
-                    <img src={`${import.meta.env.BASE_URL}images/stage-0-step-8.jpeg`} alt="Azure AI Foundry sign-in page with Sign in options" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
+                    <img src={getImagePath('stage-0-step-8.jpeg')} alt="Azure AI Foundry sign-in page with Sign in options" className="rounded-lg shadow-md border border-gray-200 max-w-full" />
                     <p className="text-sm text-gray-500 mt-2 italic">Figure: Sign in to Azure AI Foundry — Sign in options</p>
                   </div>
                 </div>
@@ -305,7 +306,7 @@ export default function Stage0Step() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-0-step-4.png`}
+                      src={getImagePath('stage-0-step-4.png')}
                       alt="Microsoft AI Foundry page"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />

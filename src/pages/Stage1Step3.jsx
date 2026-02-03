@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage1Step3() {
   return (
@@ -66,7 +67,7 @@ export default function Stage1Step3() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-3-step-1.png`}
+                      src={getImagePath('stage-1-3-step-1.png')}
                       alt="Try in playground button on Setup pane"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />

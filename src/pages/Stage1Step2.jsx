@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage1Step2() {
   const instructionText = `1. Agent Purpose & Scope
@@ -175,7 +176,7 @@ Avoid technical jargon unless the user asks for it`
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-2-step-2.png`}
+                      src={getImagePath('stage-1-2-step-2.png')}
                       alt="Setup panel with Instruction, Knowledge, and Actions sections"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -234,7 +235,7 @@ Avoid technical jargon unless the user asks for it`
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-2-step-4.png`}
+                      src={getImagePath('stage-1-2-step-4.png')}
                       alt="Instructions tab with pasted instruction text"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -271,7 +272,7 @@ Avoid technical jargon unless the user asks for it`
                   <div className="mt-4 space-y-4">
                     <div>
                       <img 
-                        src={`${import.meta.env.BASE_URL}images/stage-1-2-step-5.png`}
+                        src={getImagePath('stage-1-2-step-5.png')}
                         alt="Knowledge tab with Add button and file upload option"
                         className="rounded-lg shadow-md border border-gray-200 max-w-full"
                       />
@@ -279,7 +280,7 @@ Avoid technical jargon unless the user asks for it`
                     </div>
                     <div>
                       <img 
-                        src={`${import.meta.env.BASE_URL}images/stage-1-2-step-4-2nd.png`}
+                        src={getImagePath('stage-1-2-step-4-2nd.png')}
                         alt="HackathonEnablementData folder with vendor list and CSV files"
                         className="rounded-lg shadow-md border border-gray-200 max-w-full"
                       />

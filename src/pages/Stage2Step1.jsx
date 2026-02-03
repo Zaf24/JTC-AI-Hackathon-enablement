@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage2Step1() {
   const jsonSchema = `{
@@ -193,7 +194,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-2-updated.jpeg`}
+                      src={getImagePath('stage-2-1-step-2-updated.jpeg')}
                       alt="Logic apps page showing rg-hackathon-prd-i01 and aaf-hackathon-prdizapp-i02"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -226,7 +227,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-3.png`}
+                      src={getImagePath('stage-2-1-step-3.png')}
                       alt="Logic Apps page with Workflows and Create button"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -265,7 +266,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-4.png`}
+                      src={getImagePath('stage-2-1-step-4.png')}
                       alt="Create workflow pop-up with Stateful option and name field"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -324,7 +325,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-6.png`}
+                      src={getImagePath('stage-2-1-step-6.png')}
                       alt="Add trigger node with HTTP request trigger"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -381,7 +382,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-8.png`}
+                      src={getImagePath('stage-2-1-step-8.png')}
                       alt="Add action with Office 365 Outlook Send an E-mail (V2) option"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -422,7 +423,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-8-updated.png`}
+                      src={getImagePath('stage-2-1-step-8-updated.png')}
                       alt="Add action with Office 365 Outlook connector"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -458,7 +459,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-10.png`}
+                      src={getImagePath('stage-2-1-step-10.png')}
                       alt="Email configuration with To and Subject fields"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -549,7 +550,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-11-updated.png`}
+                      src={getImagePath('stage-2-1-step-11-updated.png')}
                       alt="Email body with dynamic content replacement example"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -581,7 +582,7 @@ Best regards,
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-13.png`}
+                      src={getImagePath('stage-2-1-step-13.png')}
                       alt="Saved workflow showing HTTP URL"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -622,7 +623,7 @@ Best regards,
                   </div>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-1-step-14.png`}
+                      src={getImagePath('stage-2-1-step-14.png')}
                       alt="Complete workflow configuration"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />

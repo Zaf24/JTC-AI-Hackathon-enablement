@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage2Step2() {
   const openApiSchema = `{
@@ -345,7 +346,7 @@ export default function Stage2Step2() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-2-step-2.png`}
+                      src={getImagePath('stage-2-2-step-2.png')}
                       alt="Actions section with Add button and OpenAPI 3.0 specified tool option"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -379,7 +380,7 @@ export default function Stage2Step2() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-2-step-4.png`}
+                      src={getImagePath('stage-2-2-step-4.png')}
                       alt="OpenAPI tool configuration with name and description fields"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -470,7 +471,7 @@ export default function Stage2Step2() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-2-step-6.png`}
+                      src={getImagePath('stage-2-2-step-6.png')}
                       alt="OpenAPI schema with HTTP URL inserted in servers array"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -532,7 +533,7 @@ export default function Stage2Step2() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-2-2-step-8.png`}
+                      src={getImagePath('stage-2-2-step-8.png')}
                       alt="Create Tool button and tool creation confirmation"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />

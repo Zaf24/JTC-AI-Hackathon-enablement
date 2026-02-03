@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage3Step1() {
   const instructionText = `9. Data Analysis & Visualization (Code Interpreter Augmentation)
@@ -151,7 +152,7 @@ Do not return:
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-3-1-step-3.png`}
+                      src={getImagePath('stage-3-1-step-3.png')}
                       alt="Actions section showing + Add and Code Interpreter option"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -187,7 +188,7 @@ Do not return:
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-3-1-step-4.png`}
+                      src={getImagePath('stage-3-1-step-4.png')}
                       alt="Code Interpreter file picker showing Vendor_review_JTC_AI_Hackathon.csv"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />

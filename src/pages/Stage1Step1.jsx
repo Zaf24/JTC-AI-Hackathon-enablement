@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { getImagePath } from '../utils/basePath'
 
 export default function Stage1Step1() {
   return (
@@ -92,7 +93,7 @@ export default function Stage1Step1() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-2-updated.png`}
+                      src={getImagePath('stage-1-1-step-2-updated.png')}
                       alt="Microsoft AI Foundry Overview page showing resource aaf-hackathon-prdizapp-i02jyfn"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -126,7 +127,7 @@ export default function Stage1Step1() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-5.png`}
+                      src={getImagePath('stage-1-1-step-step-5.png')}
                       alt="Click on Agents in the side pane"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
@@ -161,7 +162,7 @@ export default function Stage1Step1() {
                   </ol>
                   <div className="mt-4">
                     <img 
-                      src={`${import.meta.env.BASE_URL}images/stage-1-1-step-step-8.png`}
+                      src={getImagePath('stage-1-1-step-step-8.png')}
                       alt="Rename model to [Your-Team-Name] Vendor Scout"
                       className="rounded-lg shadow-md border border-gray-200 max-w-full"
                     />
