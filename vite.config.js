@@ -6,10 +6,8 @@ import fs from 'fs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-// Base path for GitHub Pages deployment (must match repo name exactly, case-sensitive)
-// If deploying to root (e.g. custom domain), use '/'
-const basePath = '/JTC-AI-Hackathon-enablement/'
-
+// Relative base so the app works on any GitHub Pages URL (project subpath or root).
+// Assets load correctly whether the site is at /repo-name/ or at / (user/org site).
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -27,5 +25,5 @@ export default defineConfig({
       },
     },
   ],
-  base: basePath,
+  base: './',
 })
